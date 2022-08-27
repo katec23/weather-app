@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⛅ A Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="currentSearchLocation">Sydney, Australia</h1>
+      <p class="last-updated">last updated Thursday 7:45pm</p>
+      <div class="row">
+        <div class="card col card border border-0" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title current-description current-description-text">
+              Sunny
+            </h5>
+            <img
+              src="images/sun.svg"
+              class="card-img-top current-description sunny current-description-image"
+              alt="sunny"
+            />
+          </div>
+        </div>
+        <div class="card col card border border-0" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title current-temperature" id="temperature">16°</h5>
+            <p class="card-text current-humidity">Humidity: 23%</p>
+            <p class="card-text current-wind">Wind: 12km/h</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">FRI</h5>
+            <img
+              src="images/sun.svg"
+              class="card-img-top daily-icon sunny"
+              alt="sunny"
+            />
+            <p class="card-text min-max-temp">10° / <strong>20°</strong></p>
+          </div>
+        </div>
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">SAT</h5>
+            <img
+              src="images/cloud.svg"
+              class="card-img-top daily-icon cloudy"
+              alt="cloudy"
+            />
+            <p class="card-text min-max-temp">6° / <strong>17°</strong></p>
+          </div>
+        </div>
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">SUN</h5>
+            <img
+              src="images/thunderstorm.svg"
+              class="card-img-top daily-icon thunderstorms"
+              alt="thunderstorms"
+            />
+            <p class="card-text min-max-temp">9° / <strong>21°</strong></p>
+          </div>
+        </div>
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">MON</h5>
+            <img
+              src="images/rain.svg"
+              class="card-img-top daily-icon rain"
+              alt="rain"
+            />
+            <p class="card-text min-max-temp">4° / <strong>13°</strong></p>
+          </div>
+        </div>
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">TUE</h5>
+            <img
+              src="images/sun_cloud.svg"
+              class="card-img-top daily-icon partial-sun"
+              alt="partial sun"
+            />
+            <p class="card-text min-max-temp">8° / <strong>19°</strong></p>
+          </div>
+        </div>
+        <div class="card col forecast" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title day">WED</h5>
+            <img
+              src="images/wind.svg"
+              class="card-img-top daily-icon windy"
+              alt="windy"
+            />
+            <p class="card-text min-max-temp">12° / <strong>23°</strong></p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <form id="search-form">
+        <input type="text" placeholder="Enter city..." id="enter-city" />
+        <input type="submit" value="SEARCH" class="submit-button" />
+        <br />
+      </form>
+      <br />
+      <button id="current-location-button" class="submit-button">
+        Use current location
+      </button>
+      <div class="units">
+        <a href="#" id="celcius-link">Celcius</a> |
+        <a href="#" id="fahrenheit-link">Fahrenheit</a>
+      </div>
+      <p class="creator">Coded by 💜 Kate Calcott</p>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

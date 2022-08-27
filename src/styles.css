@@ -1,0 +1,113 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 60px;
+}
+form {
+  text-align: center;
+}
+.last-updated {
+  text-align: center;
+  color: #777c7c;
+}
+.current-description {
+  text-align: right;
+  margin-left: auto;
+}
+.current-description-text {
+  font-size: 45px;
+  padding-top: 20px;
+}
+.card-img-top {
+  display: block;
+  width: 30%;
+}
+.current-description-image {
+  width: 22%;
+}
+.current-temperature {
+  font-size: 75px;
+}
+.current-humidity {
+  font-weight: 400;
+  font-size: 24px;
+}
+.current-wind {
+  font-weight: 400;
+  font-size: 24px;
+}
+.forecast {
+  margin: 4px;
+  padding: 0;
+}
+.day {
+  text-align: center;
+  font-size: 26px;
+}
+.daily-icon {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+.min-max-temp {
+  text-align: center;
+  font-size: 22px;
+}
+.sunny {
+  filter: invert(90%) sepia(85%) saturate(5960%) hue-rotate(319deg)
+    brightness(97%) contrast(107%);
+}
+.cloudy {
+  filter: invert(79%) sepia(5%) saturate(350%) hue-rotate(131deg)
+    brightness(90%) contrast(82%);
+}
+.thunderstorms {
+  filter: invert(53%) sepia(0%) saturate(7490%) hue-rotate(247deg)
+    brightness(89%) contrast(89%);
+}
+.rain {
+  filter: invert(47%) sepia(24%) saturate(1007%) hue-rotate(165deg)
+    brightness(93%) contrast(84%);
+}
+.partial-sun {
+  filter: invert(58%) sepia(94%) saturate(344%) hue-rotate(4deg) brightness(87%)
+    contrast(88%);
+}
+.windy {
+  filter: invert(77%) sepia(92%) saturate(3016%) hue-rotate(156deg)
+    brightness(100%) contrast(91%);
+}
+.submit-button {
+  color: #777c7c;
+}
+#current-location-button {
+  display: block;
+  margin: 0 auto;
+}
+.units {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #777c7c;
+}
+#celcius-link {
+  color: #777c7c;
+}
+#fahrenheit-link {
+  color: #777c7c;
+}
+#celcius-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+#fahrenheit-link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.creator {
+  text-align: center;
+}
