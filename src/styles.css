@@ -3,42 +3,105 @@ body {
 }
 h1 {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 40px;
+  color: black;
+  line-height: 30px;
+  margin-bottom: 0;
 }
-form {
-  text-align: center;
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.container {
+  max-width: 800px;
+}
+.border-div {
+  border: 1px solid lightgray;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.current-info {
+  text-align: right;
+}
+#icon {
+  height: 75px;
+  width: 75px;
+  margin-left: auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+#temperature {
+  font-size: 60px;
+  line-height: 1;
+  padding: 5px;
+  margin-top: 10px;
+}
+.units {
+  position: relative;
+  font-size: 18px;
+  top: 17px;
+}
+.units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.units .active:hover {
+  text-decoration: none;
 }
 .last-updated {
   text-align: center;
   color: #777c7c;
+  font-size: 16px;
 }
-.current-description {
-  text-align: right;
+#description {
   margin-left: auto;
+  font-size: 18px;
 }
-.current-description-text {
-  font-size: 45px;
-  padding-top: 20px;
+.current-humidity {
+  font-size: 18px;
 }
+.current-wind {
+  font-size: 18px;
+}
+form {
+  text-align: center;
+}
+.submit-button {
+  color: #777c7c;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+#current-location-button {
+  display: block;
+  margin: 0 auto;
+}
+.creator {
+  padding-top: 15px;
+}
+.open-source-code-link {
+  color: black;
+}
+.open-source-code-link:hover {
+  color: #777c7c;
+  text-decoration: none;
+}
+
 .card-img-top {
   display: block;
   width: 30%;
-}
-.current-description-image {
-  width: 22%;
-}
-.current-temperature {
-  font-size: 75px;
-}
-.current-humidity {
-  font-weight: 400;
-  font-size: 24px;
-}
-.current-wind {
-  font-weight: 400;
-  font-size: 24px;
 }
 .forecast {
   margin: 4px;
@@ -80,40 +143,4 @@ form {
 .windy {
   filter: invert(77%) sepia(92%) saturate(3016%) hue-rotate(156deg)
     brightness(100%) contrast(91%);
-}
-.submit-button {
-  color: #777c7c;
-}
-#current-location-button {
-  display: block;
-  margin: 0 auto;
-}
-.units {
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
-.creator {
-  text-align: center;
-}
-
-.open-source-code-link {
-  color: black;
-}
-.open-source-code-link:hover {
-  color: #777c7c;
-  text-decoration: none;
-}
-
-#description:first-letter {
-  text-transform: capitalize;
-}
-.units .active {
-  color: #777c7c;
-  cursor: default;
-  text-decoration: none;
-}
-
-.units .active:hover {
-  text-decoration: none;
 }

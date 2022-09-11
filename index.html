@@ -22,122 +22,112 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="currentSearchLocation">Sydney</h1>
-      <p class="last-updated">last updated Thursday 7:45pm</p>
-      <div class="row">
-        <div class="card col card border border-0" style="width: 18rem">
-          <div class="card-body">
-            <h5
-              class="card-title current-description current-description-text"
-              id="description"
-            >
-              Sunny
-            </h5>
-            <img
-              src="images/sun.svg"
-              class="card-img-top current-description sunny current-description-image"
-              alt="sunny"
-              id="icon"
-            />
-          </div>
-        </div>
-        <div class="card col card border border-0" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title current-temperature" id="temperature">16</h5>
-            <span class="units">
-              <a href="#" id="celcius-link" class="active">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-            <p class="card-text current-humidity">
-              Humidity: <span id="humidity">1</span>%
-            </p>
-            <p class="card-text current-wind">
-              Wind: <span id="wind">12</span>km/h
-            </p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="row">
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">FRI</h5>
-            <img
-              src="images/sun.svg"
-              class="card-img-top daily-icon sunny"
-              alt="sunny"
-            />
-            <p class="card-text min-max-temp">10° / <strong>20°</strong></p>
-          </div>
-        </div>
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">SAT</h5>
-            <img
-              src="images/cloud.svg"
-              class="card-img-top daily-icon cloudy"
-              alt="cloudy"
-            />
-            <p class="card-text min-max-temp">6° / <strong>17°</strong></p>
-          </div>
-        </div>
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">SUN</h5>
-            <img
-              src="images/thunderstorm.svg"
-              class="card-img-top daily-icon thunderstorms"
-              alt="thunderstorms"
-            />
-            <p class="card-text min-max-temp">9° / <strong>21°</strong></p>
-          </div>
-        </div>
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">MON</h5>
-            <img
-              src="images/rain.svg"
-              class="card-img-top daily-icon rain"
-              alt="rain"
-            />
-            <p class="card-text min-max-temp">4° / <strong>13°</strong></p>
-          </div>
-        </div>
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">TUE</h5>
-            <img
-              src="images/wind.svg"
-              class="card-img-top daily-icon partial-sun"
-              alt="partial sun"
-            />
-            <p class="card-text min-max-temp">8° / <strong>19°</strong></p>
-          </div>
-        </div>
-        <div class="card col forecast" style="width: 18rem">
-          <div class="card-body">
-            <h5 class="card-title day">WED</h5>
-            <img
-              src="images/wind.svg"
-              class="card-img-top daily-icon windy"
-              alt="windy"
-            />
-            <p class="card-text min-max-temp">12° / <strong>23°</strong></p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <form id="search-form">
-        <input type="text" placeholder="Enter city..." id="enter-city" />
-        <input type="submit" value="SEARCH" class="submit-button" />
-        <br />
-      </form>
-      <br />
-      <button id="current-location-button" class="submit-button">
-        Use current location
-      </button>
+      <div class="border-div">
+        <h1 id="currentSearchLocation">Sydney</h1>
+        <h3 class="last-updated">last updated Thursday 7:45pm</h3>
 
-      <p class="creator">
+        <div class="row">
+          <div class="col-6 current-info">
+            <div class="d-flex weather-temperature">
+              <img src="images/sun.svg" alt="Sunny" id="icon" />
+              <strong id="temperature">20</strong>
+              <span class="units">
+                <a href="#" id="celcius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li id="description">Sunny</li>
+              <li class="current-humidity">
+                Humidity: <span id="humidity">20</span>%
+              </li>
+              <li class="current-wind">Wind: <span id="wind">12</span>km/h</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">FRI</h5>
+              <img
+                src="images/sun.svg"
+                class="card-img-top daily-icon sunny"
+                alt="sunny"
+              />
+              <p class="card-text min-max-temp">10° / <strong>20°</strong></p>
+            </div>
+          </div>
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">SAT</h5>
+              <img
+                src="images/cloud.svg"
+                class="card-img-top daily-icon cloudy"
+                alt="cloudy"
+              />
+              <p class="card-text min-max-temp">6° / <strong>17°</strong></p>
+            </div>
+          </div>
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">SUN</h5>
+              <img
+                src="images/thunderstorm.svg"
+                class="card-img-top daily-icon thunderstorms"
+                alt="thunderstorms"
+              />
+              <p class="card-text min-max-temp">9° / <strong>21°</strong></p>
+            </div>
+          </div>
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">MON</h5>
+              <img
+                src="images/rain.svg"
+                class="card-img-top daily-icon rain"
+                alt="rain"
+              />
+              <p class="card-text min-max-temp">4° / <strong>13°</strong></p>
+            </div>
+          </div>
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">TUE</h5>
+              <img
+                src="images/wind.svg"
+                class="card-img-top daily-icon partial-sun"
+                alt="partial sun"
+              />
+              <p class="card-text min-max-temp">8° / <strong>19°</strong></p>
+            </div>
+          </div>
+          <div class="card col forecast" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title day">WED</h5>
+              <img
+                src="images/wind.svg"
+                class="card-img-top daily-icon windy"
+                alt="windy"
+              />
+              <p class="card-text min-max-temp">12° / <strong>23°</strong></p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <form id="search-form">
+          <input type="text" placeholder="Enter city..." id="enter-city" />
+          <input type="submit" value="SEARCH" class="submit-button" />
+          <br />
+        </form>
+        <br />
+        <button id="current-location-button" class="submit-button">
+          Use current location
+        </button>
+      </div>
+      <small class="creator">
         <a
           href="https://github.com/katec23/weather-app"
           class="open-source-code-link"
@@ -145,7 +135,7 @@
           >Open-source code</a
         >
         by 💜 Kate Calcott
-      </p>
+      </small>
     </div>
     <script src="src/index.js"></script>
   </body>
