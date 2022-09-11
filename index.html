@@ -22,26 +22,38 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="currentSearchLocation">Sydney, Australia</h1>
+      <h1 id="currentSearchLocation">Sydney</h1>
       <p class="last-updated">last updated Thursday 7:45pm</p>
       <div class="row">
         <div class="card col card border border-0" style="width: 18rem">
           <div class="card-body">
-            <h5 class="card-title current-description current-description-text">
+            <h5
+              class="card-title current-description current-description-text"
+              id="description"
+            >
               Sunny
             </h5>
             <img
               src="images/sun.svg"
               class="card-img-top current-description sunny current-description-image"
               alt="sunny"
+              id="icon"
             />
           </div>
         </div>
         <div class="card col card border border-0" style="width: 18rem">
           <div class="card-body">
-            <h5 class="card-title current-temperature" id="temperature">16°</h5>
-            <p class="card-text current-humidity">Humidity: 23%</p>
-            <p class="card-text current-wind">Wind: 12km/h</p>
+            <h5 class="card-title current-temperature" id="temperature">16</h5>
+            <span class="units">
+              <a href="#" id="celcius-link" class="active">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            <p class="card-text current-humidity">
+              Humidity: <span id="humidity">1</span>%
+            </p>
+            <p class="card-text current-wind">
+              Wind: <span id="wind">12</span>km/h
+            </p>
           </div>
         </div>
       </div>
@@ -95,7 +107,7 @@
           <div class="card-body">
             <h5 class="card-title day">TUE</h5>
             <img
-              src="images/sun_cloud.svg"
+              src="images/wind.svg"
               class="card-img-top daily-icon partial-sun"
               alt="partial sun"
             />
@@ -124,10 +136,7 @@
       <button id="current-location-button" class="submit-button">
         Use current location
       </button>
-      <div class="units">
-        <a href="#" id="celcius-link">Celcius</a> |
-        <a href="#" id="fahrenheit-link">Fahrenheit</a>
-      </div>
+
       <p class="creator">
         <a
           href="https://github.com/katec23/weather-app"

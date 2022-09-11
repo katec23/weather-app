@@ -38,23 +38,28 @@ function changeDisplayCity(event) {
 let form = document.querySelector("form");
 form.addEventListener("submit", changeDisplayCity);
 
-function celcius(event) {
+function showCelciusTemperature(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "19°C";
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
-function fahrenheit(event) {
+function showFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = "66°F";
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", celcius);
+celciusLink.addEventListener("click", showCelciusTemperature);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", fahrenheit);
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 function search(event) {
   event.preventDefault();
@@ -78,7 +83,20 @@ function showTemperature(response) {
   cityElement.innerHTML = city;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${temperature}°C`;
+  temperatureElement.innerHTML = `${temperature}`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  celciusTemperature = response.data.main.temp;
 }
 
 function showPosition(position) {
@@ -97,6 +115,8 @@ function getCurrentPosition() {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentPosition);
+
+let celciusTemperature = null;
 
 // Matt's week 5 homework solution (includes info on updating humidity and wind)
 // https://codesandbox.io/s/api-homework-solution-zyx7g

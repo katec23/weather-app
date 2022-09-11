@@ -92,21 +92,6 @@ form {
   text-align: center;
   padding: 10px;
   font-size: 14px;
-  color: #777c7c;
-}
-#celcius-link {
-  color: #777c7c;
-}
-#fahrenheit-link {
-  color: #777c7c;
-}
-#celcius-link:hover {
-  cursor: pointer;
-  text-decoration: none;
-}
-#fahrenheit-link:hover {
-  cursor: pointer;
-  text-decoration: none;
 }
 .creator {
   text-align: center;
@@ -117,5 +102,18 @@ form {
 }
 .open-source-code-link:hover {
   color: #777c7c;
+  text-decoration: none;
+}
+
+#description:first-letter {
+  text-transform: capitalize;
+}
+.units .active {
+  color: #777c7c;
+  cursor: default;
+  text-decoration: none;
+}
+
+.units .active:hover {
   text-decoration: none;
 }
