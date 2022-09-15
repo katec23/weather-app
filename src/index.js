@@ -23,6 +23,41 @@ if (minutes < 10) {
 let lastUpdatedTime = document.querySelector(".last-updated");
 lastUpdatedTime.innerHTML = `Last updated ${day} ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  return days[day];
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["THU", "FRI", "SAT", "SUN"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="card col-2 forecast">
+        <div class="card-body">
+          <div class="card-title day">${day}</div>
+          <img src="images/sun.svg" class="daily-icon sunny" alt="sunny" />
+          <div class="card-text min-max-temp">
+            <span class="min-temp">
+              10° / <strong>20°</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function changeDisplayCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#enter-city");
@@ -118,5 +153,4 @@ currentLocationButton.addEventListener("click", getCurrentPosition);
 
 let celciusTemperature = null;
 
-// Matt's week 5 homework solution (includes info on updating humidity and wind)
-// https://codesandbox.io/s/api-homework-solution-zyx7g
+displayForecast();
