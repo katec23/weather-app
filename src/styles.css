@@ -6,7 +6,6 @@ h1 {
   padding: 10px;
   font-weight: bold;
   font-size: 40px;
-  color: black;
   line-height: 30px;
   margin-bottom: 10px;
 }
@@ -25,7 +24,7 @@ li:first-letter {
 }
 .container {
   max-width: 800px;
-  border: 1px solid lightgray;
+  border: 1px solid #886ce4a6;
   padding: 15px;
   margin: 10px auto;
   border-radius: 5px;
@@ -52,17 +51,9 @@ li:first-letter {
   font-size: 18px;
   top: 17px;
 }
-.units .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-.units .active:hover {
-  text-decoration: none;
-}
 .last-updated {
   text-align: center;
-  color: #777c7c;
+  color: #886ce4;
   font-size: 16px;
 }
 #description {
@@ -79,8 +70,8 @@ form {
   text-align: center;
 }
 .submit-button {
-  color: #777c7c;
-  border: 1px solid black;
+  color: #886ce4;
+  border: 1px solid #886ce4;
   border-radius: 2px;
 }
 #current-location-button {
@@ -91,7 +82,7 @@ form {
   color: black;
 }
 .open-source-code-link:hover {
-  color: #777c7c;
+  color: #886ce4;
   text-decoration: none;
 }
 
@@ -118,6 +109,7 @@ form {
 }
 .card {
   margin: auto;
+  border: 1px solid #886ce4a6;
 }
 .min-temp {
   opacity: 0.8;
