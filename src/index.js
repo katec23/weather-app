@@ -48,10 +48,10 @@ function displayForecast(response) {
           }@2x.png" class="daily-icon sunny" alt="sunny" />
           <div class="card-text min-max-temp">
             <span class="min-temp">
-              ${Math.round(forecastDay.temp.min)}° / <strong>${Math.round(
-          forecastDay.temp.max
-        )}°</strong>
-            </span>
+              ${Math.round(
+                forecastDay.temp.min
+              )}° </span>/ <strong>${Math.round(forecastDay.temp.max)}°</strong>
+            
           </div>
         </div>
       </div>
